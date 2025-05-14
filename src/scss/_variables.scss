@@ -1,0 +1,55 @@
+$urlAssets: 'https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_general/depor/prod';
+$slugCommonAssets: '/elementos-comunes/';
+$urlCommonAssets: $urlAssets + $slugCommonAssets; 
+
+//fonts
+$icomoon: 'icomoon';
+$pathFonts: $urlCommonAssets + 'fonts/';
+
+$helveticaNowDisplayBold: 'HelveticaNowDisplay-Bold';
+$notoSansRegular: 'NotoSans-Regular';
+$notoSansBold: 'NotoSans-Bold';
+$helveticaNowDisplayMedium: 'HelveticaNowDisplay-Medium';
+$helveticaNowDisplayRegular: 'HelveticaNowDisplay-Regular';
+$robotoBold: 'Roboto-Bold';
+$robotoMedium: 'Roboto-Medium';
+$robotoRegular: 'Roboto-Regular';
+
+//body
+$blackColor: #000;
+$whiteColor: #FFF;
+$lightGreyColor: #D3D2D2;
+$backgroundColorBody: $whiteColor;
+
+//header Depor
+$backgroundColorHeader: #000;
+$colorCruz: #FFF;
+$pathLogo: $urlCommonAssets + 'img/logo-depor-white.png';
+$widthLogo: 70px;
+$heightLogo: 26px;
+$backgroundSize: 80%;
+
+//especial
+$titleColor: #707070;
+$separatorColor: #707070;
+$bgTeamToKnockoutStage: #5270A0;
+$bgTeamToEuropeLeague: #BBC7D9;
+$groupNameColor: #1F4FAB;
+$bgEliminatedTeam: $lightGreyColor;
+$bgActiveButton: #939393;
+$bgInactiveButton: #670331;
+$epigraphColor: $blackColor;
+$bgNextButton: #6A6A6A;
+$bgSelectedTeam: #939393;
+$bgUnselectedTeam: $lightGreyColor;
+$greyColor: #807D7D;
+$bgInput: #EBEBEB;
+$inputColor: #848489;
+$sharePredictionColor: #848484;
+$matchDataColor: #7E7E7E;
+$scoreInputBorderColor: #D5D5D5;
+$standingColor: #5270A0;
+
+$bgPlayedMatch: #959595;
+$bgCurrentMatch: #F8BB68;
+$bgFutureMatch: $lightGreyColor;

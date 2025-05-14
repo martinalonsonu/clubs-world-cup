@@ -1,0 +1,55 @@
+@media screen and (max-width: 768px) {
+   
+}
+@media screen and (max-width: 640px) {
+    .title{
+        @include fontStyle(13px, 21px, $notoSansRegular);
+    }
+    .epigraph{
+        @include fontStyle(11px, 13px, $helveticaNowDisplayBold);
+    }
+    .group-name{
+        @include fontStyle(16px, 25px, $notoSansBold);
+    }
+    .team-name{
+        @include fontStyle(12px, 18px, $helveticaNowDisplayBold);
+    }
+    .classified-teams-title{
+        @include fontStyle(18px, 27px, $notoSansBold);
+    }
+    .btn-knockout-stage{
+        width: 35%;
+    }
+    .match-data{    
+        @include fontStyle(11px, 13px, $helveticaNowDisplayMedium);        
+    }
+    .groupstage-team-name{
+        @include fontStyle(13px, 18px, $helveticaNowDisplayBold);
+    }
+    .match-rounded{
+        @include backgroundColor($bgUnselectedTeam);
+        @include border($whiteColor);
+        border-radius: 9px;
+        height: 35px;
+    }
+    .input-score{
+        @include border($scoreInputBorderColor);
+        border-radius: 8px;
+        width: 38px;
+        height: 38px;
+    }
+    .standing-head{
+        @include fontStyle(10px, 10px, $helveticaNowDisplayBold);
+    }
+    .standing-data{
+        @include fontStyle(10px, 10px, $helveticaNowDisplayMedium);
+    }
+}
+@media screen and (max-width: 390px) {
+    .title{
+        @include fontStyle(11px, 20px, $notoSansRegular);
+    }
+    .classified-teams-title{
+        @include fontStyle(16px, 25px, $notoSansBold);
+    }
+}
