@@ -3314,6 +3314,7 @@ textarea.form-control-lg {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  
 }
 
 .img-thumbnail {
@@ -8946,6 +8947,32 @@ a {
   font-display: block;
 }
 
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Noto Sans KR"),
+    url("https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_general/depor/prod/mundial-de-clubes-2025-calculadora-tabla-de-posiciones-resultados-pronosticos/fonts/noto-sans-kr-v21-latin-500.woff2")
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local("Noto Sans KR"),
+    url("https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_general/depor/prod/mundial-de-clubes-2025-calculadora-tabla-de-posiciones-resultados-pronosticos/fonts/noto-sans-kr-v21-latin-900.woff2")
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
@@ -9032,16 +9059,15 @@ header .ctn-header .ctn-logo .cruz {
 }
 
 .title {
-  font: 500 20px/29px "NotoSans-Regular";
+  font: 500 15px/21px "Noto Sans KR";
+  color: #05337A;
+  max-width: 567px;
+  margin: auto;
 }
 
 .epigraph {
   font: 500 22px/26px "HelveticaNowDisplay-Bold";
   color: #000;
-}
-
-.title {
-  font: 500 20px/29px "NotoSans-Regular";
 }
 
 .epigraph {
@@ -9055,7 +9081,7 @@ header .ctn-header .ctn-logo .cruz {
   white-space: -o-pre-wrap;
 }
 
-.title, .group-name, .champion-name {
+.group-name, .champion-name {
   color: #707070;
 }
 
@@ -9068,12 +9094,20 @@ header .ctn-header .ctn-logo .cruz {
 }
 
 .group-name {
-  font: 500 18px/27px "NotoSans-Bold";
-  color: #1F4FAB;
+  font: 900 16px/25px "Noto Sans KR";
+  letter-spacing: -0.4px;
+  color: #083DA2;
+  margin: 0;
+}
+
+.date-match{
+  font: 500 9px/13px "Noto Sans KR";
+  letter-spacing: -0.23px;
+  color: #4354AF;
 }
 
 .team-name {
-  font: 500 15px/21px "HelveticaNowDisplay-Bold";
+  font: 500 12px/18px "Noto Sans KR";
 }
 
 .classified-teams-title {
@@ -9085,7 +9119,9 @@ header .ctn-header .ctn-logo .cruz {
 }
 
 .knockout-stage-unselected-team {
-  background-color: #D3D2D2;
+  background-color: #e0dfdf;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 .text-selected {
@@ -9096,8 +9132,21 @@ header .ctn-header .ctn-logo .cruz {
   color: #807D7D;
 }
 
-.btn-knockout-stage, .btn-next {
-  font: 500 14px/16px "HelveticaNowDisplay-Bold";
+.btn-knockout-stage {
+  font: 500 15px/21px "Noto Sans KR";
+      height: 33px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+.btn-next {
+  font: 500 12px/7px "Noto Sans KR";
+      height: 33px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
 }
 
 .btn-knockout-stage {
@@ -9105,15 +9154,15 @@ header .ctn-header .ctn-logo .cruz {
 }
 
 .inactive {
-  background-color: #670331;
+  background-color: #05337a;
 }
 
 .active {
-  background-color: #939393;
+  background-color: #fb0000;
 }
 
 .btn-next, .btn-final {
-  background-color: #6A6A6A;
+  background-color: #083da2;
   border: 1px solid #FFF;
 }
 
@@ -9144,17 +9193,19 @@ header .ctn-header .ctn-logo .cruz {
 }
 
 .match-data {
-  font: 500 12px/14px "HelveticaNowDisplay-Medium";
+  font: 500 9px/13px "Noto Sans KR";
+  letter-spacing: -0.23px;
+  color: #7E7E7E;
 }
 
 .groupstage-team-name {
-  font: 500 15px/20px "HelveticaNowDisplay-Bold";
+  font: 500 12px/18px "Noto Sans KR";
 }
 
 .match-rounded {
   border: 1px solid #FFF;
   border-radius: 9px;
-  height: 42px;
+  height: 33px;
 }
 
 .bg-played-match {
@@ -9162,7 +9213,7 @@ header .ctn-header .ctn-logo .cruz {
 }
 
 .bg-current-match {
-  background-color: #F8BB68;
+  background-color: #E0DFDF;
 }
 
 .bg-future-match {
@@ -9188,8 +9239,8 @@ input[type=number] {
 .input-score {
   border: 1px solid #D5D5D5;
   border-radius: 8px;
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
 }
 
 table {
@@ -9198,11 +9249,11 @@ table {
 }
 
 .standing-head {
-  font: 500 13px/13px "HelveticaNowDisplay-Bold";
+  font: 700 10px/7px "Noto Sans KR";
 }
 
 .standing-data {
-  font: 500 13px/13px "HelveticaNowDisplay-Medium";
+  font: 500 10px/7px "Noto Sans KR";
 }
 
 td:first-child {
@@ -9216,7 +9267,7 @@ td:last-child {
 }
 
 .to-knockout-stage-team {
-  background-color: #5270A0;
+  background-color: #6D91CC;
 }
 
 .to-europe-league-team {

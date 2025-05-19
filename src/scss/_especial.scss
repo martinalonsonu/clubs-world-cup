@@ -1,161 +1,171 @@
-.cont-principal{
-    margin-top: 46px;
+.cont-principal {
+  margin-top: 46px;
 }
-.cont-layout, .cont-home{
-    max-width: 960px;       
+.cont-layout,
+.cont-home {
+  max-width: 960px;
 }
-.title{
-    @include fontStyle(20px, 29px, $notoSansRegular);    
+.title {
+  @include fontStyle(20px, 29px, $notoSansRegular);
 }
-.epigraph{
-    @include fontStyle(22px, 26px, $helveticaNowDisplayBold);
-    @include fontColor($epigraphColor);
+.epigraph {
+  @include fontStyle(22px, 26px, $helveticaNowDisplayBold);
+  @include fontColor($epigraphColor);
 }
-.title{
-    @include fontStyle(20px, 29px, $notoSansRegular);    
+.title {
+  @include fontStyle(20px, 29px, $notoSansKRMedium);
 }
-.epigraph{
-    @include fontStyle(22px, 26px, $helveticaNowDisplayBold);
-    @include fontColor($epigraphColor);
+.epigraph {
+  @include fontStyle(22px, 26px, $helveticaNowDisplayBold);
+  @include fontColor($epigraphColor);
 }
-.title, .epigraph{
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -o-pre-wrap;
+.title,
+.epigraph {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
 }
-.title, .group-name, .champion-name{
-    @include fontColor($titleColor);
+.title,
+.group-name,
+.champion-name {
+  @include fontColor($titleColor);
 }
-.standing-head{
-    @include fontColor($standingColor);
+.standing-head {
+  @include fontColor($standingColor);
 }
-.separator{
-    @include border($separatorColor);
+.separator {
+  @include border($separatorColor);
 }
-.group-name{
-    @include fontStyle(18px, 27px, $notoSansBold);
-    @include fontColor($groupNameColor);
+.group-name {
+  @include fontStyle(18px, 27px, $notoSansBold);
+  @include fontColor($groupNameColor);
 }
-.team-name{
-    @include fontStyle(15px, 21px, $helveticaNowDisplayBold);
+.team-name {
+  @include fontStyle(15px, 21px, $helveticaNowDisplayBold);
 }
-.classified-teams-title{
-    @include fontStyle(26px, 35px, $notoSansBold);
+.classified-teams-title {
+  @include fontStyle(26px, 35px, $notoSansBold);
 }
-.knockout-stage-selected-team{
-    @include backgroundColor($bgSelectedTeam);
+.knockout-stage-selected-team {
+  @include backgroundColor($bgSelectedTeam);
 }
-.knockout-stage-unselected-team{
-    @include backgroundColor($bgUnselectedTeam);
+.knockout-stage-unselected-team {
+  @include backgroundColor($bgUnselectedTeam);
 }
-.text-selected{
-    @include fontColor($whiteColor);   
+.text-selected {
+  @include fontColor($whiteColor);
 }
-.text-unselected{
-    @include fontColor($greyColor);   
+.text-unselected {
+  @include fontColor($greyColor);
 }
-.btn-knockout-stage, .btn-next{
-    @include fontStyle(14px, 16px, $helveticaNowDisplayBold);    
+.btn-knockout-stage,
+.btn-next {
+  @include fontStyle(14px, 16px, $helveticaNowDisplayBold);
 }
-.btn-knockout-stage{
-    width: 60%;
+.btn-knockout-stage {
+  width: 60%;
 }
-.inactive{
-    @include backgroundColor($bgInactiveButton);  
+.inactive {
+  @include backgroundColor($bgInactiveButton);
 }
-.active{
-    @include backgroundColor($bgActiveButton);    
+.active {
+  @include backgroundColor($bgActiveButton);
 }
-.btn-next, .btn-final{
-    @include backgroundColor($bgNextButton); 
-    @include border($whiteColor) 
+.btn-next,
+.btn-final {
+  @include backgroundColor($bgNextButton);
+  @include border($whiteColor);
 }
-.champion-name{
-    @include fontStyle(22px, 25px, $helveticaNowDisplayBold);
+.champion-name {
+  @include fontStyle(22px, 25px, $helveticaNowDisplayBold);
 }
-.bg-input{
-    @include backgroundColor($bgInput);      
-    @include fontColor($inputColor);   
+.bg-input {
+  @include backgroundColor($bgInput);
+  @include fontColor($inputColor);
 }
-.bg-input, .item-form, .team-final-form{
-    @include fontStyle(14px, 17px, $robotoRegular);    
+.bg-input,
+.item-form,
+.team-final-form {
+  @include fontStyle(14px, 17px, $robotoRegular);
 }
-.item-form, a.item-form{
-    color: $blackColor !important; 
+.item-form,
+a.item-form {
+  color: $blackColor !important;
 }
-.btn-final{
-    @include fontStyle(15px, 22px, $robotoMedium);    
+.btn-final {
+  @include fontStyle(15px, 22px, $robotoMedium);
 }
-.share-prediction{
-    @include fontStyle(14px, 17px, $robotoBold);   
-    @include fontColor($sharePredictionColor);
+.share-prediction {
+  @include fontStyle(14px, 17px, $robotoBold);
+  @include fontColor($sharePredictionColor);
 }
-.match-data{    
-    @include fontStyle(12px, 14px, $helveticaNowDisplayMedium);        
+.match-data {
+  @include fontStyle(12px, 14px, $helveticaNowDisplayMedium);
 }
-.groupstage-team-name{
-    @include fontStyle(15px, 20px, $helveticaNowDisplayBold);
+.groupstage-team-name {
+  @include fontStyle(15px, 20px, $helveticaNowDisplayBold);
 }
-.match-rounded{
-    @include border($whiteColor);
-    border-radius: 9px;
-    height: 42px;
+.match-rounded {
+  @include border($whiteColor);
+  border-radius: 9px;
+  height: 42px;
 }
-.bg-played-match{
-    @include backgroundColor($bgPlayedMatch);
+.bg-played-match {
+  @include backgroundColor($bgPlayedMatch);
 }
-.bg-current-match{
-    @include backgroundColor($bgCurrentMatch);
+.bg-current-match {
+  @include backgroundColor($bgCurrentMatch);
 }
-.bg-future-match{
-    @include backgroundColor($bgFutureMatch);
+.bg-future-match {
+  @include backgroundColor($bgFutureMatch);
 }
-.match-data, .input-score{
-    @include fontColor($matchDataColor);
-}  
+.match-data,
+.input-score {
+  @include fontColor($matchDataColor);
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 /* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
-.input-score{
-    @include border($scoreInputBorderColor);
-    border-radius: 8px;
-    width: 44px;
-    height: 44px;
+.input-score {
+  @include border($scoreInputBorderColor);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
 }
 table {
-    border-collapse: separate; 
-    border-spacing: 0 4px;
+  border-collapse: separate;
+  border-spacing: 0 4px;
 }
-.standing-head{
-    @include fontStyle(13px, 13px, $helveticaNowDisplayBold);
+.standing-head {
+  @include fontStyle(13px, 13px, $helveticaNowDisplayBold);
 }
-.standing-data{
-    @include fontStyle(13px, 13px, $helveticaNowDisplayMedium);
+.standing-data {
+  @include fontStyle(13px, 13px, $helveticaNowDisplayMedium);
 }
-td:first-child{ 
-    border-top-left-radius: 6px; 
-    border-bottom-left-radius: 6px;
+td:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
-td:last-child{ 
-    border-top-right-radius: 6px; 
-    border-bottom-right-radius: 6px;
+td:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
-.to-knockout-stage-team{
-    @include backgroundColor($bgTeamToKnockoutStage);
+.to-knockout-stage-team {
+  @include backgroundColor($bgTeamToKnockoutStage);
 }
-.to-europe-league-team{
-    @include backgroundColor($bgTeamToEuropeLeague);
+.to-europe-league-team {
+  @include backgroundColor($bgTeamToEuropeLeague);
 }
-.eliminated-team{
-    @include backgroundColor($bgEliminatedTeam);
+.eliminated-team {
+  @include backgroundColor($bgEliminatedTeam);
 }
-.w-standing-flag{
-    width: 25px;
+.w-standing-flag {
+  width: 25px;
 }
