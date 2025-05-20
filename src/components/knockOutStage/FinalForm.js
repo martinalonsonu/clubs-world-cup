@@ -18,13 +18,13 @@ const FinalForm = (props) => {
   const slugFlag = slug !== "" ? slug : playOff;
 
   return (
-    <section className="my-3 px-2 d-flex flex-column justify-content-center align-items-center">
+    <section className="px-2 d-flex flex-column justify-content-center align-items-center">
       <Champion name={`¡${name} CAMPEÓN!`} slugFlag={slugFlag} />
       <button
         className="btn  rounded-pill shadow px-3 py-2 btn-next text-white"
         onClick={handleRefresh}
       >
-        Reiniciar Calculadora
+        Inicio
       </button>
     </section>
   );

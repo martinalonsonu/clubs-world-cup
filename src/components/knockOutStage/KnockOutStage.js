@@ -26,6 +26,8 @@ const KnockOutStage = (props) => {
     false,
     false,
   ]);
+  const [stageHistory, setStageHistory] = useState([]);
+
   const instructionsStage = [
     {
       text: " los equipos que crees que pasarán a cuartos",
@@ -132,8 +134,43 @@ const KnockOutStage = (props) => {
     setSelectedTeamMatch8(initialSelectedTeam);
   };
 
+  const setPreviousStage = () => {
+    const currentStagePos = getCurrentStage();
+
+    // Si estamos en octavos de final, recargamos la página
+    if (currentStagePos === roundOf16StagePos) {
+      window.location.reload();
+      return;
+    }
+
+    if (stageHistory.length > 0) {
+      const previousState = stageHistory[stageHistory.length - 1];
+      setKnockOutStage(previousState.stage);
+      setWinners(previousState.winners);
+
+      const tmpCurrentStage = [...currentStage];
+      tmpCurrentStage.fill(false);
+      tmpCurrentStage[previousState.currentStagePos] = true;
+      setCurrentStage(tmpCurrentStage);
+
+      setStageHistory(stageHistory.slice(0, -1));
+      unselectTeams();
+    }
+  };
+
   const setNextStage = () => {
     if (!winners.some((item) => item === null) && winners.length > 1) {
+      // Guardar el estado actual antes de avanzar
+      setStageHistory([
+        ...stageHistory,
+        {
+          stage: [...knockOutStage],
+          winners: [...winners],
+          currentStagePos: getCurrentStage(),
+        },
+      ]);
+
+      // Crear la siguiente etapa
       winners.map((winner, i) => {
         if (i % 2 === 0) {
           nextStage = [
@@ -158,7 +195,7 @@ const KnockOutStage = (props) => {
       });
       setKnockOutStage(nextStage);
 
-      var tmpCurrentStage = currentStage;
+      var tmpCurrentStage = [...currentStage];
       var currentStagePos = getCurrentStage();
       tmpCurrentStage.fill(false);
       tmpCurrentStage[currentStagePos + 1] = true;
@@ -174,38 +211,34 @@ const KnockOutStage = (props) => {
     }
   };
 
-  console.log(getCurrentStage());
-
   const stadiums = [
     [
-      "<p><b>PHILADELPHIA</b>/ Lincoln Financial Field - Sábado 28 de Junio - 11:00 am</p>",
-      "<p><b>CHARLOTTE</b>/ Bank of America Stadium - Sábado 28 de Junio - 3:00 pm</p>",
-      "<p><b>ATLANTA</b>/ Mercedes Benz Stadium - Domingo 29 de Junio - 11:00 am</p>",
-      "<p><b>MIAMI</b>/ Hard Rock Stadium - Domingo 29 de Junio - 3:00 pm</p>",
-      "<p><b>CHARLOTTE</b>/ Bank of America Stadium - Lunes 30 de Junio - 2:00 pm</p>",
-      "<p><b>ORLANDO</b>/ Camping World Stadium - Lunes 30 de Junio - 8:00 pm</p>",
-      "<p><b>MIAMI</b>/ Hard Rock Stadium - Martes 1 de Julio - 2:00 pm</p>",
-      "<p><b>ATLANTA</b>/ Mercedes Bezn Stadium - Martes 1 de Julio - 8:00 pm</p>",
+      "<p><b>PHILADELPHIA</b> / Lincoln Financial Field - Sábado 28 de Junio - 11:00 am</p>",
+      "<p><b>CHARLOTTE</b> / Bank of America Stadium - Sábado 28 de Junio - 3:00 pm</p>",
+      "<p><b>CHARLOTTE</b> / Bank of America Stadium - Lunes 30 de Junio - 2:00 pm</p>",
+      "<p><b>ORLANDO</b> / Camping World Stadium - Lunes 30 de Junio - 8:00 pm</p>",
+      "<p><b>ATLANTA</b> / Mercedes Benz Stadium - Domingo 29 de Junio - 11:00 am</p>",
+      "<p><b>MIAMI</b> / Hard Rock Stadium - Domingo 29 de Junio - 3:00 pm</p>",
+      "<p><b>ATLANTA</b> / Mercedes Bezn Stadium - Martes 1 de Julio - 8:00 pm</p>",
+      "<p><b>MIAMI</b> / Hard Rock Stadium - Martes 1 de Julio - 2:00 pm</p>",
     ],
     [
-      "<p><b>PHILADELPHIA</b>/ Lincoln Financial Field - Viernes 4 de Julio - 8:00 pm</p>",
-      "<p><b>ATLANTA</b>/ Mercedes Benz Stadium - Sábado 5 de Julio - 11:00 am</p>",
-      "<p><b>ORLANDO</b>/ Camping World Stadium - Viernes 4 de Julio - 2:00 pm</p>",
-      "<p><b>NEW JERSEY</b>/ MetLife Stadium - Sábado 5 de Julio - 3:00 pm</p>",
+      "<p><b>PHILADELPHIA</b> / Lincoln Financial Field - Viernes 4 de Julio - 8:00 pm</p>",
+      "<p><b>ORLANDO</b> / Camping World Stadium - Viernes 4 de Julio - 2:00 pm</p>",
+      "<p><b>ATLANTA</b> / Mercedes Benz Stadium - Sábado 5 de Julio - 11:00 am</p>",
+      "<p><b>NEW JERSEY</b> / MetLife Stadium - Sábado 5 de Julio - 3:00 pm</p>",
     ],
     [
-      "<p><b>NEW JERSEY</b>/ MetLife Stadium - Martes 8 de Julio - 2:00 pm</p>",
-      "<p><b>NEW JERSEY</b>/ MetLife Stadium - Miércoles 9 de Julio - 2:00 pm</p>",
+      "<p><b>NEW JERSEY</b> / MetLife Stadium - Martes 8 de Julio - 2:00 pm</p>",
+      "<p><b>NEW JERSEY</b> / MetLife Stadium - Miércoles 9 de Julio - 2:00 pm</p>",
     ],
     [
-      "<p><b>NEW JERSEY</b>/ MetLife Stadium - Domingo 13 de Julio - 2:00 pm</p>",
+      "<p><b>NEW JERSEY</b> / MetLife Stadium - Domingo 13 de Julio - 2:00 pm</p>",
     ],
   ];
 
   return (
-    <section
-      style={{ position: "relative", marginBottom: "25px", marginTop: "-25px" }}
-    >
+    <section style={{ marginBottom: "25px" }}>
       <section className="text-center">
         <p className="mb-0 px-3 px-md-0 team-name" style={{ color: "#05337A" }}>
           Dale click a{instructionsStage[getCurrentStage()].text}
@@ -326,9 +359,24 @@ const KnockOutStage = (props) => {
         )}
         <section className="col-12 d-flex justify-content-center my-4">
           <button
+            className="btn btn-next me-2"
+            type="button"
+            onClick={setPreviousStage}
+            style={{
+              padding: "7px 16px",
+              borderRadius: "17px",
+              height: "33px",
+              border: "1px solid #fff",
+              color: "#fff",
+              backgroundColor: "#fb0000",
+            }}
+          >
+            Anterior
+          </button>
+          <button
             className="btn btn-next text-white"
             type="button"
-            onClick={() => setNextStage()}
+            onClick={setNextStage}
             style={{
               padding: "7px 16px",
               borderRadius: "17px",

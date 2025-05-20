@@ -1,34 +1,28 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 
 //context
-import GroupsContext from '../../context/GroupsContext';
+import GroupsContext from "../../context/GroupsContext";
 
 //components
-import Loading from '../common/Loading';
+import Loading from "../common/Loading";
 import Heading from "../common/Heading";
 import GroupStage from "../groupStage/GroupStage";
-import KnockOutStageForm from '../knockOutStage/KnockOutStageForm';
+import KnockOutStageForm from "../knockOutStage/KnockOutStageForm";
 
 const Home = () => {
-
-    const { loading, stage, groupStagePos } = useContext(GroupsContext);
-
-    return (
+  const { loading, stage, groupStagePos } = useContext(GroupsContext);
+  return (
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
         <>
-            {
-                loading 
-                ? <Loading />
-                : <>
-                    <Heading />
-                    {
-                        (stage === groupStagePos)
-                            ? <GroupStage />        
-                            : <KnockOutStageForm />
-                    }
-                </>
-            }    
+          {stage !== 2 && <Heading />}
+          {stage === groupStagePos ? <GroupStage /> : <KnockOutStageForm />}
         </>
-    )
-}
+      )}
+    </>
+  );
+};
 
 export default Home;

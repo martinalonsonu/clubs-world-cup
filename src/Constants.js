@@ -30,9 +30,9 @@ const query = "SELECT A, B, C, D, E, F, G, H, I, J";
 const responseStatusOk = 200;
 const hiddenTitle = "CALCULADORA CHAMPIONS LEAGUE 2022 2023";
 const titleHome =
-  "Conoce todas las fechas, estadios, horarios (hora peruana), tabla de posiciones y pronostica qué equipos clasificarán a octavos";
+  "Conoce todas las fechas, estadios, horarios (hora peruana), tabla de posiciones y pronostica qué equipos clasificarán a octavos y llegarán a la final.";
 const epigraph =
-  "Conoce todas las fechas, estadios, horarios (hora peruana), tabla de posiciones y pronostica qué equipos clasificarán a octavos";
+  "Conoce todas las fechas, estadios, horarios (hora peruana), tabla de posiciones y pronostica qué equipos clasificarán a octavos y llegarán a la final.";
 const urlPrivacyPolicy = "politicas-privacidad";
 const idEntityApi = "DEPORPronosticoCampeonQatar2022";
 const slugPrediction = "mi-pronostico";

@@ -6,7 +6,7 @@ import { isDesktop } from "react-device-detect";
 import { titleHome, urlAssets } from "../../Constants";
 
 const Heading = () => {
-  const headingBanner = isDesktop ? "desktop" : "desktop";
+  const headingBanner = isDesktop ? "desktop" : "mobile";
 
   return (
     <section className="text-center">
@@ -14,7 +14,7 @@ const Heading = () => {
         alt={titleHome}
         className="d-block img-fluid"
         effect="blur"
-        src={`${urlAssets}/img/header-${headingBanner}.png`}
+        src={`${urlAssets}/img/header-${headingBanner}.jpg?d=2`}
       />
     </section>
   );

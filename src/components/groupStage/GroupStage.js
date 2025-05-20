@@ -4,9 +4,7 @@ import { useForm } from "react-hook-form";
 //constants
 import {
   epigraph,
-  hiddenTitle,
   isPlayed,
-  titleHome,
   urlFlags,
   sessionStorageKey,
 } from "../../Constants";
@@ -508,6 +506,7 @@ const GroupStage = () => {
         team1: standings["G"][0],
         team2: standings["H"][1],
       },
+
       {
         id: 5,
         team1: standings["B"][0],
@@ -520,13 +519,13 @@ const GroupStage = () => {
       },
       {
         id: 7,
-        team1: standings["H"][0],
-        team2: standings["G"][1],
+        team1: standings["F"][0],
+        team2: standings["E"][1],
       },
       {
         id: 8,
-        team1: standings["F"][0],
-        team2: standings["E"][1],
+        team1: standings["H"][0],
+        team2: standings["G"][1],
       },
     ];
 
@@ -534,7 +533,7 @@ const GroupStage = () => {
   };
 
   return (
-    <section style={{ position: "relative", marginTop: "-30px" }}>
+    <section>
       <section className="text-center">
         <p className="mb-0 title">{epigraph}</p>
       </section>
