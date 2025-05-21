@@ -1,10 +1,10 @@
-const twitterAccount = "deportuit_peru";
-const brand = "Depor";
-const urlBrand = "https://depor.com/";
-const urlPortadaMarca = "https://especiales.depor.com/especiales/index.html";
-const domainMarca = "https://especiales.depor.com/";
+const twitterAccount = "elcomercio_peru";
+const brand = "El Comercio";
+const urlBrand = "https://elcomercio.pe";
+const urlPortadaMarca = "https://elcomercio.pe";
+const domainMarca = "https://especiales.elcomercio.com/?q=especiales/";
 const domainAssets =
-  "https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_general/depor/prod/";
+  "https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales/";
 const slugCommonAssets2 = "elementos-comunes/";
 const headers = {
   "Content-Type": "application/json",

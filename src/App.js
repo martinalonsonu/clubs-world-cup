@@ -13,7 +13,7 @@ import Caja3 from "./ads/Caja3";
 import Zocalo from "./ads/Zocalo";
 
 //components
-import Header from "./components/common/Header";
+// import Header from "./components/common/Header";
 import EmptySpace from "./components/common/EmptySpace";
 import Home from "./components/home/Home";
 import Prediction from "./components/prediction/Prediction";
@@ -21,7 +21,7 @@ import Prediction from "./components/prediction/Prediction";
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main className="container-full d-flex justify-content-around cont-principal px-0">
         {isDesktop && <LateralIzquierdo />}
         <section className="container cont-layout">
