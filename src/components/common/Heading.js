@@ -14,7 +14,7 @@ const Heading = () => {
         alt={titleHome}
         className="d-block img-fluid"
         effect="blur"
-        src={`${urlAssets}/img/header-${headingBanner}.jpg?d=2`}
+        src={`${urlAssets}/img/header-${headingBanner}.jpg?d=3`}
       />
     </section>
   );

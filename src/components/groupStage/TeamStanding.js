@@ -29,9 +29,10 @@ const TeamStanding = (props) => {
           <img
             className="px-1"
             src={`${urlAssets}${slug}.png`}
+            style={{ height: "21px" }}
             alt={name}
             loading="lazy"
-            width={21}
+            height={21}
           />
           <span className="ms-1">{name}</span>
         </article>

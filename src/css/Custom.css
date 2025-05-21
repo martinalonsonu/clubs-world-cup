@@ -2407,9 +2407,9 @@ progress {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  font-family: "Noto Sans KR";
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #212529;
   background-color: #fff;
@@ -6977,8 +6977,8 @@ fieldset:disabled .btn {
     padding-left: 0.25rem !important;
   }
   .px-md-2 {
-    padding-right: 0.5rem !important;
-    padding-left: 0.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
   }
   .px-md-3 {
     padding-right: 1rem !important;
@@ -9199,7 +9199,8 @@ header .ctn-header .ctn-logo .cruz {
 }
 
 .groupstage-team-name {
-  font: 500 12px/18px "Noto Sans KR";
+  font: 500 15px/18px "Noto Sans KR";
+  color: #656565;
 }
 
 .match-rounded {
@@ -9253,7 +9254,7 @@ table {
 }
 
 .standing-data {
-  font: 500 10px/7px "Noto Sans KR";
+  font: 500 12px/7px "Noto Sans KR";
 }
 
 td:first-child {
@@ -9282,30 +9283,15 @@ td:last-child {
   width: 25px;
 }
 
+@media screen and (max-width: 415px) {
+  .groupstage-team-name {
+  font: 500 11px/18px "Noto Sans KR";
+}
+}
+
 @media screen and (max-width: 640px) {
-  .title {
-    font: 500 13px/21px "NotoSans-Regular";
-  }
-  .epigraph {
-    font: 500 11px/13px "HelveticaNowDisplay-Bold";
-  }
-  .group-name {
-    font: 500 16px/25px "NotoSans-Bold";
-  }
-  .team-name {
-    font: 500 12px/18px "HelveticaNowDisplay-Bold";
-  }
-  .classified-teams-title {
-    font: 500 18px/27px "NotoSans-Bold";
-  }
   .btn-knockout-stage {
     width: 35%;
-  }
-  .match-data {
-    font: 500 11px/13px "HelveticaNowDisplay-Medium";
-  }
-  .groupstage-team-name {
-    font: 500 13px/18px "HelveticaNowDisplay-Bold";
   }
   .match-rounded {
     background-color: #D3D2D2;
@@ -9319,20 +9305,6 @@ td:last-child {
     width: 38px;
     height: 38px;
   }
-  .standing-head {
-    font: 500 10px/10px "HelveticaNowDisplay-Bold";
-  }
-  .standing-data {
-    font: 500 10px/10px "HelveticaNowDisplay-Medium";
-  }
 }
 
-@media screen and (max-width: 390px) {
-  .title {
-    font: 500 11px/20px "NotoSans-Regular";
-  }
-  .classified-teams-title {
-    font: 500 16px/25px "NotoSans-Bold";
-  }
-}
 /*# sourceMappingURL=Custom.css.map */
