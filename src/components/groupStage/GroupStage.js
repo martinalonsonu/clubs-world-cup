@@ -257,7 +257,11 @@ const GroupStage = () => {
         return b.goalsDifference - a.goalsDifference;
       }
 
-      return b.goalsFor - a.goalsFor;
+      if (a.goalsFor !== b.goalsFor) {
+        return b.goalsFor - a.goalsFor;
+      }
+
+      return a.name.localeCompare(b.name); // Orden alfabético ascendente
     });
 
     return arrayTeams;
