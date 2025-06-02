@@ -164,10 +164,10 @@ const C = {
 };
 
 const D = {
-  AME: {
-    id: "AME",
-    name: "América",
-    slug: "america",
+  LAN: {
+    id: "LAN",
+    name: "Los Angeles",
+    slug: "los-angeles",
     points: 0,
     playedMatches: 0,
     wonMatches: 0,
